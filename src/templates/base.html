@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<link rel="canonical" href="https://dersalzlampenshop.de{{ path }}">
+<meta property="og:type" content="{{ og_type|default('website') }}">
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:url" content="https://dersalzlampenshop.de{{ path }}">
+<meta property="og:site_name" content="Der Salzlampenshop">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/static/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/css/style.css">
+{% if extra_head %}{{ extra_head|safe }}{% endif %}
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<div class="notice-bar">
+  Ihr unabhängiger Ratgeber rund um Himalaya-Salzlampen &middot; Empfehlung: <a href="https://himalayastyling.de/" rel="noopener">HimalayaStyling</a> für den Kauf
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="/">Der Salzlampen<span>shop</span></a>
+    <nav class="main-nav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="/" {% if path=='/' %}aria-current="page"{% endif %}>Startseite</a></li>
+        <li><a href="/ueber-uns/" {% if path=='/ueber-uns/' %}aria-current="page"{% endif %}>Über uns</a></li>
+        <li><a href="/ratgeber/" {% if path=='/ratgeber/' %}aria-current="page"{% endif %}>Ratgeber</a></li>
+        <li><a href="/neuigkeiten/" {% if path.startswith('/neuigkeiten/') %}aria-current="page"{% endif %}>Neuigkeiten</a></li>
+        <li><a href="/kontakt/" {% if path=='/kontakt/' %}aria-current="page"{% endif %}>Kontakt</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+{{ content|safe }}
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Der Salzlampenshop</h4>
+        <p>Unabhängiger deutschsprachiger Ratgeber rund um Himalaya-Salzlampen: Wirkung, Pflege, Größen und Kaufberatung &mdash; ohne Übertreibungen, dafür mit Hintergrund.</p>
+      </div>
+      <div>
+        <h4>Seiten</h4>
+        <ul>
+          <li><a href="/">Startseite</a></li>
+          <li><a href="/ueber-uns/">Über uns</a></li>
+          <li><a href="/ratgeber/">Ratgeber</a></li>
+          <li><a href="/neuigkeiten/">Neuigkeiten</a></li>
+          <li><a href="/autorin/">Autorin</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Ratgeber</h4>
+        <ul>
+          <li><a href="/groessen-guide/">Größen-Guide</a></li>
+          <li><a href="/pflege-und-wartung/">Pflege &amp; Wartung</a></li>
+          <li><a href="/haeufig-gestellte-fragen/">Häufig gestellte Fragen</a></li>
+          <li><a href="https://himalayastyling.de/" rel="noopener">Zu HimalayaStyling</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li><a href="mailto:info@dersalzlampenshop.de">info@dersalzlampenshop.de</a></li>
+          <li><a href="/kontakt/">Kontaktseite</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; {{ year }} Der Salzlampenshop</span>
+      <span>
+        <a href="/impressum/">Impressum</a> &middot;
+        <a href="/datenschutz/">Datenschutz</a> &middot;
+        <a href="/cookie-richtlinie/">Cookie-Richtlinie</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
