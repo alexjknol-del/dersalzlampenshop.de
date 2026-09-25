@@ -106,6 +106,7 @@ def build():
 
     # Kontakt
     write_page(c.PAGE_KONTAKT["path"], c.PAGE_KONTAKT["title"], c.PAGE_KONTAKT["description"], c.PAGE_KONTAKT["body"])
+    write_page(c.PAGE_PARTNER["path"], c.PAGE_PARTNER["title"], c.PAGE_PARTNER["description"], c.PAGE_PARTNER["body"])
 
     # Impressum / Datenschutz / Cookies
     write_page(c.PAGE_IMPRESSUM["path"], c.PAGE_IMPRESSUM["title"], c.PAGE_IMPRESSUM["description"], c.PAGE_IMPRESSUM["body"])
@@ -172,7 +173,7 @@ def build():
 
     # robots.txt & sitemap.xml
     all_paths = ["/", "/ueber-uns/", "/ratgeber/", "/groessen-guide/", "/pflege-und-wartung/",
-                 "/haeufig-gestellte-fragen/", "/autorin/", "/kontakt/", "/neuigkeiten/",
+                 "/haeufig-gestellte-fragen/", "/autorin/", "/kontakt/", "/partner/", "/neuigkeiten/",
                  "/impressum/", "/datenschutz/", "/cookie-richtlinie/"]
     all_paths += ["/neuigkeiten/{}/".format(p["slug"]) for p in posts_sorted]
 

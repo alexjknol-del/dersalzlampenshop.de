@@ -498,3 +498,29 @@ PAGE_COOKIES = {
 </section>
 """,
 }
+
+
+PAGE_PARTNER = {
+    "title": "Partner | Der Salzlampenshop",
+    "description": "Ausgewählte Partnerseiten von Der Salzlampenshop, von Himalaya-Salzlampen bis zu Pflegeprodukten.",
+    "path": "/partner/",
+    "body": """
+<section class="section">
+  <div class="container">
+    <div class="breadcrumb"><a href="/">Startseite</a> &rsaquo; Partner</div>
+    <div class="article-head">
+      <h1>Partner</h1>
+      <p class="lead">Seiten, mit denen Der Salzlampenshop zusammenarbeitet oder die wir gern empfehlen.</p>
+    </div>
+    <div class="article-body">
+      <h2>HimalayaStyling</h2>
+      <p>Onlineshop für Himalaya-Salzlampen in vielen Formen und Größen, dazu Ersatzteile wie Kabel und Leuchtmittel.</p>
+      <p><a href="https://himalayastyling.de/" rel="noopener" target="_blank">HimalayaStyling</a></p>
+      <h2>TKTX Tattoos</h2>
+      <p>Shop für Betäubungscreme vor dem Tätowieren, in mehreren Stärken und Farbvarianten und mit Hologramm gegen Fälschungen. Bestellungen vor 14 Uhr werden am selben Tag verschickt.</p>
+      <p><a href="https://tktxtattoos.de/" rel="noopener" target="_blank">TKTX</a></p>
+    </div>
+  </div>
+</section>
+""",
+}
